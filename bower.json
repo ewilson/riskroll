@@ -1,0 +1,25 @@
+{
+  "name": "riskroll",
+  "version": "0.0.0",
+  "authors": [
+    "Eric Wilson (wilson.eric.n@gmail.com)"
+  ],
+  "description": "Risk-rolling SPA",
+  "keywords": [
+    "risk"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "handlebars": "~2.0.0",
+    "jquery": "~2.1.3"
+  }
+}
