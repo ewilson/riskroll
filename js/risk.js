@@ -1,7 +1,4 @@
 function attackSequence(attackNum, defendNum) {
-    console.log("In AS");
-    console.log(attackNum);
-    console.log(defendNum);
   var allResults = [];
   while (attackNum > 0 && defendNum > 0) {
     var result = simpleRoll(
@@ -9,10 +6,8 @@ function attackSequence(attackNum, defendNum) {
       Math.min(defendNum, 2));
     attackNum -= result.attackLoss;
     defendNum -= result.defendLoss;
-    console.log(JSON.stringify(result));
     allResults.push(result);
   }
-  console.log(JSON.stringify(allResults));
   return {
     resultList: allResults,
     attackNum: attackNum,

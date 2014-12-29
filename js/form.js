@@ -4,7 +4,9 @@ $(function() {
 		var defendNum = $('#defendNum').val();
 		e.preventDefault();
 		console.log("#" + attackNum + defendNum);
-		attackSequence(attackNum, defendNum);
+		var results = attackSequence(attackNum, defendNum);
+		console.log(results.attackNum);
+		console.log(results.defendNum);
 	});
 });
 function attackForm() {
