@@ -8,14 +8,11 @@ $(function() {
 		console.log(results);
 		var $main = $('#main');
 		var source   = $("#results-template").html();
+		Handlebars.logger.level = 0;
 		var template = Handlebars.compile(source);
-		var attackResultHtml = template({player: 'Attacker', 
-						 num: results.attackNum});
-		var defendResultHtml = template({player: 'Defender', 
-						 num: results.defendNum});
+		var resultHtml = template({results: results});
 		$main.append('<div id="results"></div>');
 		var $results = $('#results');
-		$results.append(attackResultHtml);
-		$results.append(defendResultHtml);
+		$results.append(resultHtml);
 	});
 });

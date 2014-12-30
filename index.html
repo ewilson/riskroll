@@ -7,8 +7,6 @@
     <script src="bower_components/handlebars/handlebars.min.js"></script>
     <script src="js/dice.js"></script>
     <script src="js/riskroll.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   </head>
   <body>
     <div class="container">
@@ -25,7 +23,28 @@
 	</form>
       </div>
       <script id="results-template" type="text/x-handlebars-template">
-	<h3>{{player}}s remaining: {{num}}</h3>
+	{{#each results}}
+	  <div class="panel panel-primary">
+	    <div class="panel-heading"></div>
+	    <div class="panel-body">
+	      <table class="table table-striped">
+		<thead>
+		  <tr>
+		    <th>Attacker - {{this.attackNum}} remain</th>
+		    <th>Defender - {{this.defendNum}} remain</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  {{#each this.diceResults}}
+		  <tr>
+		    <td>{{this.attackDie}}</td><td>{{this.defendDie}}</td>
+		  </tr>
+		  {{/each}}
+		</tbody>
+	      </table>
+	    </div>
+	  </div>
+	{{/each}}
       </script>
     </div>
   </body>
