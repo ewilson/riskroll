@@ -1,6 +1,11 @@
-function attackSequence(attackNum, defendNum) {
+function attackSequence(attackNum, defendNum, options) {
     var allResults = [];
-    while (attackNum > 0 && defendNum > 0) {
+    var initAttackNum = attackNum;
+    var initDefendNum = defendNum;
+    while (attackNum > 0 && defendNum > 0 
+	   && initAttackNum - attackNum < options.absLoss
+	   && initAttackNum - attackNum < initDefendNum - defendNum + options.relLoss
+	   && attackNum > options.minRemain) {
 	var result = simpleRoll(
 				Math.min(attackNum, 3),
 				Math.min(defendNum, 2));

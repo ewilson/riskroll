@@ -5,7 +5,8 @@ $(function() {
 		var attackNum = $('#attackNum').val();
 		var defendNum = $('#defendNum').val();
 		e.preventDefault();
-		var results = attackSequence(attackNum, defendNum);
+		var options = { absLoss: attackNum, relLoss: attackNum, minRemain: 0};
+		var results = attackSequence(attackNum, defendNum, options);
 		console.log(results);
 		var $main = $('#main');
 		var source   = $("#results-template").html();
