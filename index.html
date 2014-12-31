@@ -12,16 +12,19 @@
     <div class="container">
       <h2>Risk Roller</h2>
       <div id="main">
-	<form class="form-inline">
-	  <div class="form-group">
-	    <input type="text" class="form-control" id="attackNum" placeholder="Attacking Troops">
-	  </div>
-	  <div class="form-group">
-	    <input type="text" class="form-control" id="defendNum" placeholder="Defending Troops">
-	  </div>
+	<form class="form-inline" id="form">
 	  <button type="submit" class="btn btn-primary">Attack</button>
 	</form>
       </div>
+      <script id="dropdown-template" type="text/x-handlebars-template">
+	<div class="form-group">
+	  <select class="form-control" id="{{player}}">
+	  {{#each option}}
+	    <option>{{this}}</option>
+	  {{/each}}
+	  </select>
+	</div>
+      </script>
       <script id="results-template" type="text/x-handlebars-template">
 	{{#each results}}
 	  <div class="panel panel-primary">

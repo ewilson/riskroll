@@ -1,4 +1,5 @@
 $(function() {
+	addDropdowns();
 	$('button').click(function(e) {
 		$('#results').remove();		
 		var attackNum = $('#attackNum').val();
@@ -16,3 +17,24 @@ $(function() {
 		$results.append(resultHtml);
 	});
 });
+
+function addDropdowns() {
+    var source = $("#dropdown-template").html();
+    var template = Handlebars.compile(source);
+    var $form = $('#form');
+    var selections = [];
+    for (var i = 1; i <= 40; i++) {
+	selections.push(i);
+    }
+    var attackDropdown = template({
+	    player: 'attackNum',
+	    option: selections
+	});
+    var defendDropdown = template({
+	    player: 'defendNum',
+	    option: selections
+	});
+
+    $form.append(attackDropdown);
+    $form.append(defendDropdown);
+}
