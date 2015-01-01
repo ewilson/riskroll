@@ -1,3 +1,6 @@
+/**
+ * This file handles any page logic/wiring
+ */
 $(function() {
 	addDropdowns();
 	$('button').click(function(e) {

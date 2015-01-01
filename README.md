@@ -5,6 +5,8 @@ Simple Risk dice rolling program made with jQuery, Handlebars, and Bootstrap.
 
 Deployed at AWS S3 [here](http://riskroll.s3-website-us-east-1.amazonaws.com)
 
+See issues for future plans. I do not plan on implementing any of this soon, maybe next Christmas?
+
 ### For development
 
 In order to deploy locally, clone this repository, and then install dependencies with bower:

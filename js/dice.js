@@ -1,3 +1,6 @@
+/**
+ * This file handles logic for dice rolling and attack sequences
+ */
 function attackSequence(attackNum, defendNum, options) {
     var allResults = [];
     var initAttackNum = attackNum;
